@@ -1,0 +1,6 @@
+@import '../variables';
+
+.container {
+    width: calc(($grid-gap * 3) + (((100% - ($grid-gap * 13)) / 12) * 3));
+    margin-right: $grid-gap;
+}
