@@ -11,6 +11,7 @@ module.exports = {
         }
       }
     },
+    "gatsby-plugin-smoothscroll",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",

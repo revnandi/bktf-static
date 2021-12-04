@@ -1,19 +1,24 @@
 import React from 'react'
 import * as styles from './header.module.scss';
-
-console.log(styles);
+import BaIcon from '../images/icon_ba.svg';
+import Navigation from './navigation';
 
 const Header = () => {
   return (
     <header className={ styles.container }>
-      <nav>
-          <ul>
-              <li>fdf</li>
-              <li>gfh</li>
-              <li>hkkh</li>
-              <li>fih</li>
-          </ul>
-      </nav>
+      <div className={ styles.top }>
+        <h1 className={ styles.logo }>
+            Budapest <br/>
+            Kortárstánc <br/>
+            Főiskola
+        </h1>
+        <img src={ BaIcon } alt="" />
+      </div>
+      <h2 className={ styles.subtitle }>
+          Kortástánc <br/>
+          művész
+      </h2>
+      <Navigation/>
     </header>
   )
 };

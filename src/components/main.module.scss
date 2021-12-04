@@ -1,0 +1,5 @@
+@import '../variables';
+
+.container {
+    width: calc((((100% - ($grid-gap * 13)) / 12) * 9 ) + ($grid-gap * 9));
+}

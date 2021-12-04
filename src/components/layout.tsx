@@ -1,10 +1,8 @@
 import React, { ReactNode } from 'react'
 import * as styles from './layout.module.scss';
+import '@fontsource/kumbh-sans';
 
-import Header from './header';
-import Main from './main';
-
-console.log(styles);
+import MouseCanvas from './mouse';
 
 interface Props {
   children: ReactNode;
@@ -13,8 +11,8 @@ interface Props {
 const Layout = ({ children }: Props) => {
   return (
     <div className={ styles.container }>
-      <Header/>
-      <Main/>
+      { children }
+      <MouseCanvas />
     </div>
   )
 };
