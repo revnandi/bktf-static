@@ -1,0 +1,34 @@
+@import '../variables';
+@import "../mixins";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(17px);
+}
+
+.svg {
+  position: absolute;
+  bottom: 7rem;
+  // width: 50%;
+  height: 50%;
+  fill: $color-blob;
+  // width: 50vmax;
+  z-index: -1;
+  animation: move 40s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  @include breakpoint(large) {
+    position: static;
+  }
+}
+
+@keyframes move {
+  0%   { transform: scale(1.6)   translate(-5vw, 0px); }
+  38%  { transform: scale(1.8, 1) translate(-5vw, 30vh) rotate(160deg); }
+  40%  { transform: scale(1.8, 1) translate(-5vw, 40vh) rotate(160deg); }
+  78%  { transform: scale(1.9) translate(-5vw, 20vh) rotate(-90deg); }
+  100% { transform: scale(1.6)   translate(-5vw, 0px); }
+}

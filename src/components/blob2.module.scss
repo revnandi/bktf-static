@@ -1,0 +1,30 @@
+@import '../variables';
+@import "../mixins";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(17px);
+}
+
+.svg {
+  position: absolute;
+  right: -20rem;
+  bottom: 5rem;
+  height: 50%;
+  fill: $color-blob;
+  z-index: -1;
+  animation: move 40s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes move {
+  0%   { transform: scale(1.9)   translate(-5vw, 0vh); }
+  26%  { transform: scale(1.8) translate(-5vw, 30vh) rotate(160deg); }
+  40%  { transform: scale(1.5) translate(-5vw, 40vh) rotate(200deg); }
+  78%  { transform: scale(2) translate(-20vw, 25vh) rotate(-15deg); }
+  100% { transform: scale(1.9)   translate(-5vw, 0vh); }
+}

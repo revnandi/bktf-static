@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://kortars.tanc.org.hu/sitemap/sitemap-index.xml
+Host: https://kortars.tanc.org.hu
