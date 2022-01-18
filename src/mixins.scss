@@ -15,7 +15,11 @@
 		@media (min-width: 1248px) { @content; }
 	}
 
+	@else if $class == ultra {
+		@media (min-width: 1440px) { @content; }
+	}
+
 	@else {
-		@warn 'Breakpoint mixin supports: small, medium, large';
+		@warn 'Breakpoint mixin supports: small, medium, large, wide, ultra';
 	}
 }

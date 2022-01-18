@@ -60,12 +60,10 @@
     font-size: 2rem;
   }
   @include breakpoint(large) {
-    font-size: 2rem;
     position: relative;
   }
-  @include breakpoint(wide) {
+  @include breakpoint(ultra) {
     font-size: 2.75rem;
-    position: relative;
   }
 }
 

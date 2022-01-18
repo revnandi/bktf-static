@@ -19,7 +19,7 @@ import doodle_3 from '../images/BKTF_TA_pictograms_fin-01.svg';
 import doodle_4 from '../images/BKTF_TA_pictograms_fin-05.svg';
 import doodle_5 from '../images/BKTF_TA_pictograms_fin-40.svg';
 import doodle_6 from '../images/BKTF_TA_pictograms_fin-48.svg';
-import doodle_7 from '../images/BKTF_TA_pictograms_fin-26.svg';
+import doodle_7 from '../images/BKTF_TA_pictograms_fin-24.svg';
 import doodle_8 from '../images/BKTF_TA_pictograms_fin-49.svg';
 import doodle_9 from '../images/BKTF_TA_pictograms_fin-07.svg';
 import doodle_10 from '../images/BKTF_TA_pictograms_fin-59.svg';
@@ -58,17 +58,14 @@ const Main = ({ passedFunction }: Props) => {
         }}
         fireOnRapidScroll={true}
       >
-        <section id="course">
+        <section>
           <Content>
-            {/* <StaticImage
-              src="../images/01_2x.jpg"
-              alt="Táncosok"
-              placeholder="blurred"
-              style={ { marginBottom: '2.25rem' } }
-            /> */}
             <Slider></Slider>
+            <div id="course">
+              <Trans>section_course_body</Trans>
+            </div>
             <div style={ { position: 'relative' } }>
-              <h1 style={ { fontSize: '1.875rem', fontWeight: '700' } }>
+              <h1 style={ { fontSize: '0.937rem', fontWeight: '700' } }>
                 <Trans>section_course_quote_text</Trans>
               </h1>
               <p style={ { fontSize: '0.937rem' } }>
@@ -89,14 +86,11 @@ const Main = ({ passedFunction }: Props) => {
                   }
                 }
               />
-                <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
-                  <Parallax y={[350, -300]}>
-                      <div style={{ backgroundImage: `url(${cloud_1})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center' }} dangerouslySetInnerHTML={{ __html:t('cloud_1') }}></div>
-                  </Parallax>
-                </div>
-            </div>
-            <div>
-              <Trans>section_course_body</Trans>
+              <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+                <Parallax y={[350, -300]}>
+                    <div style={{ backgroundImage: `url(${cloud_1})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center' }} dangerouslySetInnerHTML={{ __html:t('cloud_1') }}></div>
+                </Parallax>
+              </div>
             </div>
           </Content>
         </section>
@@ -105,6 +99,7 @@ const Main = ({ passedFunction }: Props) => {
         passedFunction('entrance');
         }}
         fireOnRapidScroll={true}
+        topOffset="20%"
       >
       <div>
         <section id="entrance">
@@ -112,7 +107,7 @@ const Main = ({ passedFunction }: Props) => {
             <div style={ { position: 'relative' } }>
               <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
                 <Parallax y={[350, -300]}>
-                  <div style={{ backgroundImage: `url(${cloud_2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '25.625rem', height: '6.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_2') }}></div>
+                  <div id="cloud_eloado" style={{ backgroundImage: `url(${cloud_2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '25.625rem', height: '6.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_2') }}></div>
                 </Parallax>
               </div>
               <img
@@ -176,13 +171,16 @@ const Main = ({ passedFunction }: Props) => {
         <section>
           <SectionTitle title={t('timetable_title')} isFilled/>
           <Timetable/>
+          <Content>
+            <div dangerouslySetInnerHTML={{ __html:t('section_entrance_body_3') }} style={ { marginTop: '2rem' } }></div>
+          </Content>
         </section>
       </div>
       </Waypoint>
       <div style={ { position: 'relative' } }>
         <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
           <Parallax y={[350, -300]}>
-            <div style={{ backgroundImage: `url(${cloud_3})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_3') }}></div>
+            <div id="cloud_kreativitas" style={{ backgroundImage: `url(${cloud_3})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_3') }}></div>
           </Parallax>
         </div>
         <img
@@ -194,7 +192,7 @@ const Main = ({ passedFunction }: Props) => {
               position: 'absolute',
               width: '10.25rem',
               left: '0',
-              bottom: '0'
+              top: '-5.7rem'
             }
           }
         />
@@ -215,7 +213,7 @@ const Main = ({ passedFunction }: Props) => {
           <div style={ { position: 'relative' } }>
             <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
               <Parallax y={[350, -300]}>
-                <div style={{ backgroundImage: `url(${cloud_4})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '7.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_4') }}></div>
+                <div id="cloud_altern" style={{ backgroundImage: `url(${cloud_6})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_6') }}></div>
               </Parallax>
             </div>
             <img
@@ -245,7 +243,7 @@ const Main = ({ passedFunction }: Props) => {
           <section>
             <div style={{ marginBottom: '1.5rem' }}>
               <StaticImage
-                src="../images/02_2x.jpg"
+                src="../images/03_2x.jpg"
                 alt="Stáb tagok"
                 placeholder="blurred"
               />
@@ -291,7 +289,7 @@ const Main = ({ passedFunction }: Props) => {
           <div style={ { position: 'relative' } }>
             <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
               <Parallax y={[350, -300]}>
-                <div style={{ backgroundImage: `url(${cloud_5})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '7.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_5') }}></div>
+                <div id="cloud_sajat" style={{ backgroundImage: `url(${cloud_4})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '7.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_4') }}></div>
               </Parallax>
             </div>
             <img
@@ -302,9 +300,8 @@ const Main = ({ passedFunction }: Props) => {
                 {
                   position: 'absolute',
                   width: '10.25rem',
-                  left: '1rem',
-                  top: '-6.55rem',
-                  transform: 'rotate(155deg)'
+                  left: '11rem',
+                  top: '-4.15rem',
                 }
               }
             />
@@ -340,7 +337,7 @@ const Main = ({ passedFunction }: Props) => {
         <div style={ { position: 'relative' } }>
           <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
             <Parallax y={[350, -300]}>
-              <div style={{ backgroundImage: `url(${cloud_6})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_6') }}></div>
+              <div id="cloud_a_muveszi" style={{ backgroundImage: `url(${cloud_5})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '7.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_5') }}></div>
             </Parallax>
           </div>
           <img
@@ -376,7 +373,7 @@ const Main = ({ passedFunction }: Props) => {
           <div style={ { position: 'relative' } }>
             <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
               <Parallax y={[350, -300]}>
-                <div style={{ backgroundImage: `url(${cloud_7})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_7') }}></div>
+                <div id="cloud_a_kozossegben" style={{ backgroundImage: `url(${cloud_7})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_7') }}></div>
               </Parallax>
             </div>
             <img
@@ -411,7 +408,7 @@ const Main = ({ passedFunction }: Props) => {
           <div style={ { position: 'relative' } }>
             <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
               <Parallax y={[350, -300]}>
-                <div style={{ backgroundImage: `url(${cloud_8})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_8') }}></div>
+                <div id="cloud_reflekt" style={{ backgroundImage: `url(${cloud_8})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_8') }}></div>
               </Parallax>
             </div>
             <img
@@ -432,43 +429,6 @@ const Main = ({ passedFunction }: Props) => {
         </div>
       </Waypoint>
       <Waypoint onEnter={ function(props) {
-        passedFunction('movement');
-        }}
-        fireOnRapidScroll={true}
-        bottomOffset="20%"
-      >
-        <div>
-          <section id="movement">
-            <Content>
-              <SectionTitle title={t('section_movement_title')}/>
-              <div dangerouslySetInnerHTML={{__html:t('section_movement_body')}}></div>
-            </Content>
-          </section>
-          <div style={ { position: 'relative' } }>
-            <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
-              <Parallax y={[350, -300]}>
-                <div style={{ backgroundImage: `url(${cloud_9})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '5.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_9') }}></div>
-              </Parallax>
-            </div>
-            <img
-              className={ styles.doodle }
-              src={ doodle_12 }
-              alt=""
-              style={
-                {
-                  position: 'absolute',
-                  width: '10.25rem',
-                  left: '32rem',
-                  bottom: '-5rem',
-                  transform: 'rotate(-45deg)'
-                }
-              }
-            />
-            <hr style={ { height: '1px', margin: '12.25rem 0 1.75rem 0', border: 'none', color: '#000', backgroundColor: '#000' } }/>
-          </div>
-        </div>
-      </Waypoint>
-      <Waypoint onEnter={ function(props) {
         passedFunction('questions');
         }}
         topOffset="20"
@@ -478,7 +438,7 @@ const Main = ({ passedFunction }: Props) => {
         <div>
           <section id="questions">
             <Content>
-              <SectionTitle title="Gyakori kérdések"/>
+              <SectionTitle title={t('qa_title')}/>
               <h2 style={{ fontSize: '1.125rem', fontWeight: '700', margin: '0' }}><Trans>qa_q1</Trans></h2>
               <div dangerouslySetInnerHTML={{__html:t('qa_a1')}}></div>
               
@@ -506,7 +466,7 @@ const Main = ({ passedFunction }: Props) => {
             <div style={ { position: 'relative' } }>
               <div className={ styles.nomobile } style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
                 <Parallax y={[200, -350]}>
-                  <div style={{ backgroundImage: `url(${cloud_10})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '12.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_10') }}></div>
+                  <div id="cloud_tanccal" style={{ backgroundImage: `url(${cloud_10})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover', width: '19.625rem', height: '12.25rem', display: 'flex', alignItems: 'center', color: '#000', fontSize: '0.875rem', fontWeight: '500', justifyContent: 'center', textAlign: 'center'}} dangerouslySetInnerHTML={{ __html:t('cloud_10') }}></div>
                 </Parallax>
               </div>
             </div>
@@ -531,7 +491,11 @@ const Main = ({ passedFunction }: Props) => {
             H-1036 Budapest, Perc utca 2.</p>
             <p>+36 1 250 3046<br/>
             +36 70 953 0516</p>
-            <p><Trans>contact_mail</Trans></p>
+            <p>
+              <a href={ `mailto:${t('contact_mail')}` }>
+                <Trans>contact_mail</Trans>
+              </a>
+            </p>
             <p><a rel="noreferrer" href="https://www.facebook.com/BKTF.BCDA.BA" aria-label="Facebook">facebook</a><br/><a rel="noreferrer" href="https://www.instagram.com/bcda_budapest/" aria-label="Instagram">instagram</a></p>
           </Content>
         </section>

@@ -84,14 +84,6 @@ const Navigation = ({ currentWaypoint, isOpen, passedFunction }: Props) => {
             <Trans>menu_item_videos</Trans>
           </AnchorLink>
         </li>
-        <li className={ [styles.item, currentWaypoint === 'movement' ? styles.active : ''].join(' ') } onClick={() => handleClick('#movement')}>
-          <AnchorLink
-            className={ styles.link } 
-            to={ context.language === "hu" ? "/#movement" : "/en/#movement" }
-          >
-            <Trans>menu_item_movement</Trans>
-          </AnchorLink>
-        </li>
         <li className={ [styles.item, currentWaypoint === 'questions' ? styles.active : ''].join(' ') } onClick={() => handleClick('#questions')}>
           <AnchorLink
             className={ styles.link } 

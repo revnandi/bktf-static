@@ -43,6 +43,19 @@ class MouseCanvas extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener(
+      'resize',
+      () => {
+        this.setState({
+          cHeight: document.body.clientHeight,
+          cWidth: document.body.clientWidth,
+        });
+      },
+      false,
+    )
+  }
+
   startAnimation = () => {
     const canvas: any = this.canvas.current;
     const ctx = canvas.getContext('2d');
