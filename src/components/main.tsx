@@ -140,31 +140,33 @@ const Main = ({ passedFunction }: Props) => {
             </div>
             <SectionTitle title={t('section_entrance_title')}/>
             <div dangerouslySetInnerHTML={{ __html:t('section_entrance_body_1') }}></div>
-            <div className={ styles.dates } style={ { padding: '5rem 0 5rem 5rem', marginLeft: '-5rem', backgroundImage: `url(${hollow_cloud})`, backgroundRepeat: 'no-repeat' } }>
-              <h2 className={ styles.datetitle } style={ { textTransform: 'uppercase', margin: '0 0 2rem 0' } }>
-                <Trans>section_entrance_dates_title</Trans>
-              </h2>
-              <div style={ { display: 'flex', alignItems: 'center', fontSize: '1.312rem', fontWeight: '700', marginBottom: '1rem' } }>
-                <h3 className={ styles.turn } style={ { margin: '0',textTransform: 'uppercase', marginRight: '0.5rem' } }><span style={ { borderRadius: '50%', border: '3px solid', width: '1.5em', display: 'inline-block', textAlign: 'center' } }><Trans>section_entrance_dates_number_1</Trans></span> <Trans>section_entrance_dates_name_1</Trans></h3>
-                <div>→</div>
-                <div className={ styles.turnsquare } style={ { border: '3px solid', padding: '3px', marginRight: '0.5rem' } }>
-                  <Trans>section_entrance_dates_date_1</Trans>
+            { context.language === "hu" &&
+              <div className={ styles.dates } style={ { padding: '5rem 0 5rem 5rem', marginLeft: '-5rem', backgroundImage: `url(${hollow_cloud})`, backgroundRepeat: 'no-repeat' } }>
+                <h2 className={ styles.datetitle } style={ { textTransform: 'uppercase', margin: '0 0 2rem 0' } }>
+                  <Trans>section_entrance_dates_title</Trans>
+                </h2>
+                <div style={ { display: 'flex', alignItems: 'center', fontSize: '1.312rem', fontWeight: '700', marginBottom: '1rem' } }>
+                  <h3 className={ styles.turn } style={ { margin: '0',textTransform: 'uppercase', marginRight: '0.5rem' } }><span style={ { borderRadius: '50%', border: '3px solid', width: '1.5em', display: 'inline-block', textAlign: 'center' } }><Trans>section_entrance_dates_number_1</Trans></span> <Trans>section_entrance_dates_name_1</Trans></h3>
+                  <div>→</div>
+                  <div className={ styles.turnsquare } style={ { border: '3px solid', padding: '3px', marginRight: '0.5rem' } }>
+                    <Trans>section_entrance_dates_date_1</Trans>
+                  </div>
+                  <div className={ styles.turndays }>
+                    <Trans>section_entrance_dates_days_1</Trans>
+                  </div>
                 </div>
-                <div className={ styles.turndays }>
-                  <Trans>section_entrance_dates_days_1</Trans>
+                <div style={ { display: 'flex', alignItems: 'center', fontSize: '1.312rem', fontWeight: '700' } }>
+                  <h3 className={ styles.turn } style={ { margin: '0', textTransform: 'uppercase', marginRight: '0.5rem' } }><span style={ { borderRadius: '50%', border: '3px solid', width: '1.5em', display: 'inline-block', textAlign: 'center' } }><Trans>section_entrance_dates_number_2</Trans></span> <Trans>section_entrance_dates_name_2</Trans></h3>
+                  <div>→</div>
+                  <div className={ styles.turnsquare } style={ { border: '3px solid', padding: '3px', marginRight: '0.5rem' } }>
+                    <Trans>section_entrance_dates_date_2</Trans>
+                  </div>
+                  <div className={ styles.turndays }>
+                    <Trans>section_entrance_dates_days_2</Trans>
+                  </div>
                 </div>
               </div>
-              <div style={ { display: 'flex', alignItems: 'center', fontSize: '1.312rem', fontWeight: '700' } }>
-                <h3 className={ styles.turn } style={ { margin: '0', textTransform: 'uppercase', marginRight: '0.5rem' } }><span style={ { borderRadius: '50%', border: '3px solid', width: '1.5em', display: 'inline-block', textAlign: 'center' } }><Trans>section_entrance_dates_number_2</Trans></span> <Trans>section_entrance_dates_name_2</Trans></h3>
-                <div>→</div>
-                <div className={ styles.turnsquare } style={ { border: '3px solid', padding: '3px', marginRight: '0.5rem' } }>
-                  <Trans>section_entrance_dates_date_2</Trans>
-                </div>
-                <div className={ styles.turndays }>
-                  <Trans>section_entrance_dates_days_2</Trans>
-                </div>
-              </div>
-            </div>
+            }
             <div dangerouslySetInnerHTML={{ __html:t('section_entrance_body_2') }}></div>
           </Content>
         </section>
